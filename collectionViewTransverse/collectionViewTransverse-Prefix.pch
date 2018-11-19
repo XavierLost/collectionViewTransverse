@@ -1,0 +1,34 @@
+//
+//  collectionViewTransverse-Prefix.pch
+//  collectionViewTransverse
+//
+//  Created by 余天龙 on 16/7/4.
+//  Copyright © 2016年 YuTianLong. All rights reserved.
+//
+
+#ifndef collectionViewTransverse_Prefix_pch
+#define collectionViewTransverse_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+Border.h"
+#import "UIView+FirstResponder.h"
+#import "UIView+ToImage.h"
+#import "UIView+Frame.h"
+
+/**
+ * 颜色转换
+ */
+#define RGB_COLOR_ALPHA(r,g,b,a)    [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]
+#define RGB_COLOR(r,g,b)            RGB_COLOR_ALPHA(r,g,b,1)
+#define RGB_COLOR_HEX(rgbValue)     RGB_COLOR(((float)(((rgbValue) & 0xFF0000) >> 16)), ((float)(((rgbValue) & 0xFF00)>>8)), ((float)((rgbValue) & 0xFF)))
+
+/**
+ * weak 对象
+ */
+#define WEAK_OBJECT(obj, weakObj)       __weak typeof(obj) weakObj = obj;
+#define WEAK_SELF()                     WEAK_OBJECT(self, weakSelf);
+
+
+#endif /* collectionViewTransverse_Prefix_pch */
